@@ -7,7 +7,7 @@ const helmet = require('helmet');
 const minio = require('minio');
 const rcompare = require('semver/functions/rcompare');
 
-let dist = path.join(__dirname, '..', '..', 'browser-ui', 'dist');
+let dist = path.join(__dirname, '..', '..', 'vue', 'dist');
 
 function run() {
     let minioClient = new minio.Client( {
