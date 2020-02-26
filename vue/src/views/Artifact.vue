@@ -60,7 +60,7 @@ export default {
       return this.$route.params.artifactId;
     },
     artifactExists() {
-      return this.$store.getters.artifactExists(this.artifactId);
+      return this.artifactData !== undefined;
     },
     artifactData() {
       return this.$store.getters.getArtifact(this.artifactId) || {};
