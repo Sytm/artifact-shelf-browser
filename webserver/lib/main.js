@@ -34,7 +34,7 @@ function run() {
         if (cache.nextUpdate <= now) {
             cache.nextUpdate = now + 1000 * 60 * 5;
             parseArtifacts(minioClient).then(artifacts => {
-                cache = artifacts;
+                cache.cache = artifacts;
             }).then(() => {
                 res.status(200).json(cache.cache);
             });
