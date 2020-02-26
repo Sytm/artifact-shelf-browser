@@ -16,10 +16,5 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      repo: md5lukas/artifact-shelf
-      dockerfile: Dockerfile
-      tags:
-        - latest
-    when:
-      branch:
-        - release
+      repo: md5lukas/artifact-shelf-browser
+      auto_tag: true
