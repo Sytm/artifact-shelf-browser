@@ -3,12 +3,6 @@ name: default
 type: docker
 
 steps:
-  - name: test backend
-    image: node:alpine
-    commands:
-      - cd webserver/
-      - npm ci
-      - npm test
   - name: build frontend
     image: node:alpine
     commands:
