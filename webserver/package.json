@@ -1,0 +1,28 @@
+{
+  "name": "simple-artifact-browser",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.sytm.de/Sytm/simple-artifact-browser.git"
+  },
+  "author": "Lukas Planz",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "minio": "^7.0.14",
+    "node-cache": "^5.1.0",
+    "semver": "^7.1.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/minio": "^7.0.5",
+    "@types/node": "^13.7.4",
+    "mocha": "^7.0.1"
+  }
+}

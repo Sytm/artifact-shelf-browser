@@ -1,0 +1,31 @@
+kind: pipeline
+name: default
+type: docker
+
+steps:
+  - name: test backend
+    image: node:alpine
+    commands:
+      - cd webserver/
+      - npm ci
+      - npm test
+  - name: build frontend
+    image: node:alpine
+    commands:
+      - cd vue/
+      - npm ci
+      - npm run build
+  - name: publish
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      repo: md5lukas/artifact-shelf
+      dockerfile: Dockerfile
+      tags:
+        - latest
+    when:
+      branch:
+        - release
